@@ -23,28 +23,6 @@ An end-to-end MLOps pipeline that predicts whether a customer will respond posit
 5. **Model Evaluation** — Compares the newly trained model's F1 score against the current production model (if any) stored in S3.
 6. **Model Pusher** — If the new model performs better, uploads it to the S3 model registry.
 
-## Project Structure
-
-├── src/
-│ ├── components/ # Core pipeline stages (ingestion, validation, transformation, training, evaluation, pusher)
-│ ├── configuration/ # MongoDB and AWS connection handling
-│ ├── constants/ # Project-wide constants
-│ ├── data_access/ # MongoDB data access layer
-│ ├── entity/ # Config and artifact dataclasses, estimator, S3 estimator
-│ ├── cloud_storage/ # AWS S3 interaction layer
-│ ├── pipeline/ # Training pipeline orchestration
-│ ├── utils/ # Shared utility functions
-│ ├── logger.py
-│ └── exception.py
-├── config/
-│ ├── schema.yaml # Expected dataset schema
-│ └── model.yaml # Model hyperparameter config
-├── app.py # Application entry point
-├── Dockerfile
-├── requirements.txt
-└── template.py # Project scaffolding script
-
-
 ## Setup
 
 ### 1. Clone the repository
