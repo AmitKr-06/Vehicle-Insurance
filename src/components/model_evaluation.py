@@ -132,7 +132,7 @@ class ModelEvaluation:
         except Exception as e:
             raise CustomException(e, sys)
 
-    def inititate_model_evaluation(self) -> ModelTrainerArtifact:
+    def initiate_model_evaluation(self) -> ModelEvaluationArtifact:
         """
         Method Name : initiate_model_evaluation
         Description : This function is used to initiate all steps of the model evalutaion
